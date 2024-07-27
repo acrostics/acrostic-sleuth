@@ -1,0 +1,35 @@
+<doc id="1639122" url="https://en.wikisource.org/wiki?curid=1639122" title="Page:Carroll - Phantasmagoria and other poems (1869).djvu/121">
+Page:Carroll - Phantasmagoria and other poems (1869).djvu/121
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+[The Double Acrostic, a form of puzzle which has lately become fashionable, is constructed thus:—Two words are selected having the same number of letters: these are supposed to be written in two parallel columns, and a series of words is then found (their length is immaterial) such that the first column may consist of their initial letters, and the second of their final letters. For instance, if the column-words selected were 'rose' and 'ring,' we might fill up thus:—
+{| align="center" 
+|r||i||v||e||r
+|o|| ||b|| ||i
+|s||e||v||e||n
+|e|| ||g|| ||g
+
+The two column-words, and the horizontal words, are then described in a series of lines or verses, and the puzzle is complete.
+The innumerable specimens of this form of puzzle already published are in every way (if we except the studied insipidity of the separate verses, and their total want of connexion one with another) to be commended. The following attempt, made at the request of some friends who had gone to a ball at an Oxford Commemoration, is printed in the hope of suggesting a possible improvement in the treatment of the subject.]
+
+There was an ancient city, stricken down 
+⁠With a strange frenzy, and for many a day 
+They paced from morn to eve the noisy town, 
+⁠And danced the night away.
+
+
+</doc>

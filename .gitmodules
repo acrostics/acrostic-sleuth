@@ -1,0 +1,4 @@
+[submodule "data/acrostic-identification-task-dataset"]
+	path = data/acrostic-identification-task-dataset
+	url = https://github.com/acrostics/acrostic-identification-task-dataset.git
+	branch = main

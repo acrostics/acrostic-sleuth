@@ -1,0 +1,102 @@
+<doc id="594851" url="https://en.wikisource.org/wiki?curid=594851" title="United States Army Field Manual 7-93 Long-Range Surveillance Unit Operations/Appendix F">
+United States Army Field Manual 7-93 Long-Range Surveillance Unit Operations/Appendix F
+
+APPENDIX F - TRACKING AND COUNTERTRACKING, EVASION AND ESCAPE, AND SURVIVAL
+"Tracking and countertracking evasion and escape, and survival involve skills and techniques that can be crucial to an LRS team during a mission beyond the forward line of own troops. LRS teams may find that they are being tracked during the course of a mission. Additionally, they may encounter tracks or signs during movement or during a surveillance mission. To be an effective countertracker and to provide intelligence on the frequency and flow of traffic on trails, an LRS soldier must be an effective tracker."
+F-1. TRACKING AND COUNTERTRACKING.
+Operating deep behind enemy lines requires proficiency in tracking and countertracking skills. Tracking ability allows an LRS team to immediately identify the presence of the enemy and collect intelligence. Tracking is also useful when an LRS team conducts a combat search and rescue mission to retrieve a downed pilot. Additionally, knowing how to track greatly enhances the team's ability to countertrack.
+a. Concepts of Tracking. To become a tracker, certain qualities must be developed and refined such as patience, persistence, acute observation, good memory, and intuition. These traits help when the tracking signs become weak or if the tracker has a certain feeling about the situation. As the tracker moves, he forms an opinion about the enemy such as how many, degree of training, the equipment they have, and state of morale. The following six indicators help form the tracker's picture of the enemy.
+(1) "Displacement." Displacement means that something is moved from its original position. The tracker looks for signs of displacement for 10 to 15 meters in a 180-degree arc to his front from the ground to the average height of a man. (See Figure F-1.) By comparing indicators, the tracker can gain information. For example, if a footprint is found and a scuff mark on a tree is about waist high, it may indicate that an armed soldier passed this spot. (See Figure F-2). A footprint can tell the tracker what footgear the enemy is wearing, if any. It can also show the lack of proper equipment, the direction of movement, number of persons, whether they are carrying heavy loads, the sex, rate of movement, and whether or not they know they are being followed. (See Figure F-3 and Figure F-4.) Other forms of displacement are bits of clothing or thread left on the ground or vegetation. Movement of vegetation on a still day (such as broken limbs and bent grass, animals flushed from their homes or cries of excitement; trails cut through foliage, disturbed insect life, or turned over rocks) indicates a presence.
+(2) "Staining." A good example of staining is blood on the ground or foliage. Other examples of staining are mud dragged by footgear and crushed vegetation on a hard object. Crushed berries also stain. The movement of water causes it to become cloudy.
+(3) "Weathering." The weather may help or hinder the tracker to determine the age of signs. Wind, snow, rain, and sunlight are factors affecting tracking signs.
+(4) "Littering." A poorly disciplined unit will pass through an area leaving a path of litter. A tracker can use the last rain or strong wind as a measure to show the amount of time it has been there.
+(5) "Camouflaging techniques." Camouflage applies to tracking when the followed party tries to slowdown the tracker; for example, leaving footprints walking backward, brushing out trails, and walking over rocky ground or through streams are ways of camouflaging the trail.
+(6) "Interpreting combat information." The tracker makes a mental image of who he is tracking by using his learned concepts. When reporting to the commander, he indicates what he believes, but should not state it as fact. Commanders take this information under consideration. If they choose, immediate planning is done to take action against the enemy.
+b. Tracking Team Organization. Tracking units can be any size as long as they have these three elements: a leader, a tracker, and security. Often, tracking teams consist of two types:
+(1) "Tracker and cover man." Each team member is equally skilled. They can move fast, know each other's abilities and weaknesses, and can compensate for each other.
+(2) "Tracking team leader, tracker, RATELO, and two security men." The advantages of a tracking team with this many members are increased observation and security. The disadvantage is the size of the team.
+c. Tracker and Dog Teams. Tracker and dog teams are more effective than a tracker alone.
+(1) "Dog characteristics." The dog(s) follows a trail faster and can continue to track at night. Despite years of domestication, dogs retain most of the traits of their wild ancestors. If put to controlled use, these traits are effective when tracking.
+(a) Endurance. A dog can hold a steady pace and effectively track for up to eight hours. The speed can be up to 10 miles per hour, only limited by the speed of the handler. The speed and endurance can be further increased by the use of vehicles and extra teams.
+(b) Mental characteristics. Dogs are curious by nature. Dogs can be aggressive or lazy, cowardly or brave. A dog's sensory traits are what make him seem intelligent.
+(c) Aggressiveness. Tracking dogs are screened and trained. They are aggressive trackers and eager to please their handler.
+(d) Sensory characteristics. Knowledge of the following sensory traits and how the dog uses them helps the evader to think ahead of the dog.
+--Individual scent. This is the most important scent when it comes to tracking. Vapors horn body secretions work their way through the evader's shoes onto the ground. Sweat from other parts of the body rubs off onto vegetation and other objects. Scent is even left in the air.
+--Reinforcing scent. Objects are introduced to the dog that reinforce the scent as it relates to the evader. Some reinforcing scents could be on the evader's clothing or boots, or the same material as is used in his clothing. Even boot polish can help the dog.
+--Ecological scent. For the dog, the most important scent comes from the earth itself. By far, the strongest smells come from disturbances in ecology such as crushed insects, bruised vegetation, and broken ground. Over varied terrain, dogs can smell particles and vapors that are constantly carried by the evader wherever he walks.
+(2) "Favorable tracking conditions." Seldom will the conditions be ideal for the tracker and dog teams. During training, they become familiar with the difficulties they will face and learn to deal with them. The following conditions are favorable for tracker and dog teams.
+(a) Fresh scent. This is probably the most important factor for tracker teams. The fresher the scent, the greater chances of success.
+(b) Verified starting point. If trackers have a definite scent to introduce to the dogs, it helps the dogs to follow the correct trail.
+(c) Unclean evader. An unclean evader leaves a more distinctive scent.
+(d) Fast-moving evader. A fast-moving evader causes more ground disturbances and individual scent from sweat.
+(e) Night and early morning. The air is thicker and the scent lasts longer.
+(f) Cool, cloudy weather. This limits evaporation of scent.
+(g) No wind. This keeps the scent close to the ground. It also keeps it from spreading around, allowing the dog to follow the correct route.
+(h) Thick vegetation. This restricts the dissemination of scent and holds the smell.
+(3) Unfavorable tracking conditions. Marked loss in technique proficiency can be expected when the following conditions occur.
+(a) Heat. This causes rapid evaporation of scent.
+(b) Unverified start point. The dogs may follow the wrong route or scent.
+(c) Low humidity. Scent does not last as long.
+(d) Dry ground. Dry ground does not retain scent.
+(e) Wind. Wind disperses scent and causes the dog to track downwind.
+(f) Heavy rain. This washes the scent away.
+(g) Distractive scents. These take the dog's attention away from the trail. Some of these scents are blood, meat, manure, farmland, and populated areas.
+(h) Covered scent. Some elements in nature cause the scent picture to be partially or completely covered. Examples are sand that can blow over the tracks and help to disguise the track; snow and ice that can form over the track and make it nearly impossible to follow; and water. Water is one of the most difficult conditions for a tracker dog team. Water that is shallow, especially if rocks or vegetation protrude, can produce a trail that a dog can follow with varied degrees of success.
+c. Countertracking. Countertracking techniques are constantly used by LRS teams to avoid alerting the enemy to their presence. To be effective at evading trackers, countertracking techniques must be known. Knowledge of tracking is probably the best way to successfully evade trackers. Knowledge of tracker and dog teams greatly assists the survivor when evading the enemy. Some of the following techniques may throw off trackers:
+F-2. EVASION AND ESCAPE.
+Evasion is eluding the enemy during a mission or following contact. Escape is breaking away from the enemy when surrounded. Together, evasion and escape refer to the act of returning to friendly lines by foot, essentially escaping from the enemy and evading him to reach friendly lines. (See FM 90-18 for more information on evasion.)
+a. Short- and Long-Range. In short-range evasion, the evader is close to the main battle area and becomes isolated from his unit. He usually has the means to return to the unit within a few days. Long-range evasion involves greater distances behind enemy lines where the evader may have to travel miles over foreign terrain, possibly with little food and equipment. LRS teams fit into this group. Characteristics of successful long-range evasions include--
+b. Principles. The following basic principles are a must for the team to be successful at evasion:
+(1) "General evasion." When a soldier becomes isolated and is unable to return to his unit or is unable to continue his assigned mission, he must find a safe hiding place where he can make an estimate of the situation and plan his courses of action. He considers the following.
+(a) Travel. Travel is critical for the evader because chances of capture are greater, while on the move. Some planning considerations are--
+(b) Obstacles. Obstacles can impede or influence the selection of travel routes. Obstacles are in two categories: natural and man-made.
+(2) "Assisted evasion." Behind enemy lines, there may be people who are dissatisfied with the existing condition of the country. They may assist in a number of ways. One of the ways that these individuals may contribute is in establishing an evasion and escape system for allied evaders to return to friendly territory. This type of evasion is designated in the OPORD or communicated to a team by HF radio during the conduct of a mission. The team avoids contact with personnel during an evasion and escape, unless instructed to do so.
+(a) Evasion and escape lines. These are organized to contact, secure, and evacuate friendly personnel. They may provide the following assistance:
+(b) Aids. Some aids to assist the evader to return to friendly lines are--
+(c) Conduct of evasion and escape lines. Evasion and escape lines includes contacting the line. The following actions must be considered when contacting the line, approaching the line, making contact with the line, and procedures after making contact.
+(d) Traveling the line. The team considers the following in traveling the line--
+c. Evasion Planning. The LRSU commander makes an initial assessment as to the area the team will most probably evade. He coordinates with the corps or division aviation units to determine if they have combat search and rescue plans that might coincide and be of use to the LRS team. If the aviation unit does have combat search and rescue plans in effect, the plans are used whenever possible. Finally, the commander identifies and coordinates with the joint combat search and rescue commander, normally at echelons above corps. If a team cannot be assisted in evasion at the corps or division level, all evasion planing information for that team, to include DD Form 1833, is given to the joint combat search and rescue commander. DD Form 1833 is critical for the team to enter an evasion network. (For more information on joint combat search and rescue planning and execution, see FM 90-18.)
+d. LRS Team Evasion Planning. After the LRSU commander coordinates with other evasion planning agencies, he may determine the unit must make independent evasion plans. The LRSU commander starts by identifying the team evasion corridor. The corridor begins in the objective area and ends at a point the commander anticipates friendly forces will control at the end of the evasion.
+(1) The commander may also identify designated areas of recovery along the corridor. However, the preferred method is for the team leader to designate the recovery areas based on his METT-T analysis. Designated areas of recovery are specific areas on the ground where exfiltration or linkup will occur. The team leader makes a determination as it applies to his team and anticipates METT-T factors if the team must execute the evasion plan. Time intervals between recovery areas are planned; for example 24, 48, or 72 hours. This allows the LRSU commander to keep track of the team as it travels the evasion corridor. (Figure F-6)
+(2) The commander ensures the team fills out DD Form 1833. He provides the team with duress codes for all communication systems. He provides them with signals to use during the evasion for aerial recovery at designated areas of recovery. He also provides signals to use in case of indigenous or partisan linkup. He gives the team the timetable to schedule recovery areas for activation. An example of a timetable is in Figure F-7.
+F-3. SURVIVAL.
+LRS teams must know the principles of survival and must be proficient in survival techniques to successfully conduct evasion and escape operations. (See FMs 21-76 and 31-70 for more information on the principles and techniques of survival.)
+a. Survival tasks that LRSU soldiers must be proficient in are as follows:
+Size up the situation. 
+Undue haste makes waste. 
+Remember where you are. 
+Vanquish fear and panic. 
+Improvise. 
+Value living. 
+Act like the natives. 
+Live by your wits; but for now learn the basics. 
+b. A useful technique for organizing for survival is the 3-phase individual survival kit. The content of each phase of the kit depends on the environment in the area of operations and available supplies. This is only an example of the contents of a 3-phase survival kit.
+(1) "Phase 1 (extreme)." Soldier without any equipment (load-bearing equipment or rucksack). Items to be earned and their suggested uses include:
+(a) Safety pins in hat (fishing hooks or holding torn clothes).
+(b) Utility knife with magnesium fire starter on 550 cord wrapped around waist (knife, making ropes, fire starter).
+(c) Wrist compass (navigation).
+(2) "Phase 2 (moderate)." Soldiers with load-bearing equipment. Load-bearing equipment should contain a small survival kit. Kit should be tailored to the area of operation and should only contain basic health and survival necessities.
+(a) 550 cord, 6 feet (cordage, tiedown, fishing line, weapons, snares).
+(b) Waterproofed matches or lighter (fire starter).
+(c) Waterproofed iodine tablets (water purification, small cuts).
+(d) Fish hooks or lures (fishing).
+(e) Heavy duty knife with sharpener, bayonet type (heavy chopping or cutting).
+(f) Mirror (signaling).
+(g) Tape (utility work).
+(h) Aspirin.
+(i) Clear plastic bag (water purification, solar stills).
+(j) Candles (heat, light).
+(k) Surgical tubing (snares, weapons, drinking tube).
+(l) Tripwire (traps, snares, weapons).
+(m) Dental floss (cordage, fishing line, tiedown, traps).
+(n) Upholstery needles (sewing, fish hooks).
+(3)" Phase 3 (slight)." Soldier with load-bearing equipment and rucksack. Rucksack should only contain minimal equipment. The following are some examples:
+(a) Poncho (shelters, gather water such as dew).
+(b) Water purification pump.
+(c) Cordage (550), 20 feet.
+(d) Change of clothes.
+(e) Cold and wet weather jacket and pants.
+(f) Poncho liner or lightweight sleeping bag.
+NOTE: Items chosen for survival kits should have multiple uses. The items in the above list are only suggestions.
+
+</doc>
