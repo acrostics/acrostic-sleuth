@@ -15,11 +15,11 @@ data/.DS_Store
 python/tmp
 models/*
 !models/EN.vocab
-!models/EN_cm.vocab
+!models/EN_cm.csv
 !models/RU.vocab
-!models/RU_cm.vocab
+!models/RU_cm.csv
 !models/FR.vocab
-!models/FR_cm.vocab
+!models/FR_cm.csv
 
 # Compiled class file
 *.class
