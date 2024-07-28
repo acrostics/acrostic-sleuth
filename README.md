@@ -2,7 +2,7 @@
 
 AcrosticFinder is a program for identifying and ranking acrostics. 
 At a high level, the tool works by comparing the probability of random occurrence with the probability that a sequence of characters forms a meaningful word or phrase in the target language.
-AcrosticFinder is optimized to process gigabytes of text in a matter of seconds. 
+AcrosticFinder is optimized to quickly process gigabytes of text. 
 With the help of AcrosticFinder, we have been able to discover multiple previously unknown acrostics, including the English philosopher's Thomas Hobbes signature in *The Elements of Law* (THOMAS[OF]HOBBES).
 You can read more about the methodology in our upcoming paper ([preprint]()).
 
@@ -17,7 +17,7 @@ You can read more about the methodology in our upcoming paper ([preprint]()).
 ## What languages does AcrosticFinder support?
 AcrosticFinder currently support **English, French, Russian, and Latin**. 
 The only language-specific component of AcrosticFinder is the unigram language model produced by [sentencepiece](https://github.com/google/sentencepiece).
-Support for new languages can, therefore, be easily added -- please [make an issue]() here on GitHub if you wish to use AcrosticFinder with another language. 
+Support for new languages can, therefore, be easily added -- please [make an issue](https://github.com/acrostics/acrostic-finder/issues/new) here on GitHub if you wish to use AcrosticFinder with another language. 
 
 ## How to install and use AcrosticFinder?
 
@@ -26,11 +26,15 @@ We have tested AcrosticFinder on Mac OS and Linux.
 
 First, compile the code from the base directory using:
 
-```javac -encoding UTF-8 -cp src:lib/commons-cli-1.5.0.jar src/acrostics/*.java```
+```bash
+javac -encoding UTF-8 -cp src:lib/commons-cli-1.5.0.jar src/acrostics/*.java
+```
 
 Then run AcrosticFinder using the command below, replacing `INPUT` and `LANG` with the name of the directory that contains the dataset you wish AcrosticFinder to analyze and the language of that dataset, respectively:
 
-```java -cp src:lib/commons-cli-1.5.0.jar acrostics.Main -input INPUT -language LANG```
+```bash
+java -cp src:lib/commons-cli-1.5.0.jar acrostics.Main -input INPUT -language LANG
+```
 
 AcrosticFinder accepts multiple optional command line arguments -- run the tool with the `--help` flag to get the up-to-date list of all available options.
 
@@ -39,7 +43,9 @@ AcrosticFinder accepts multiple optional command line arguments -- run the tool 
 This repository includes an example dataset comprising a subset of pages with acrostics from the English subdomain of WikiSource database (see [How was AcrosticFinder evaluated?](#how-was-acrosticfinder-evaluated)). 
 You can test AcrosticFinder on this small dataset using:
 
-```java -cp src:lib/commons-cli-1.5.0.jar acrostics.Main -input data/example -language EN -mode LINE -charset utf-8 -outputSize 4000 --concise```
+```bash
+java -cp src:lib/commons-cli-1.5.0.jar acrostics.Main -input data/example -language EN -mode LINE -charset utf-8 -outputSize 4000 --concise
+```
 
 Here is the meaning behind each of the options used:
 - `-input data/example`: analyze all texts in the `data/example` directory
@@ -103,11 +109,11 @@ data/example/The Confessions of William-Henry Ireland.txt	warwick▁at▁dudley�
 
 ## How was AcrosticFinder evaluated?
 
-We have created the [Acrostic Identification Task Dataset](link here) by manually identifying all poems explicitly referred to or formatted as acrostics on English, Russian, and French subdomains of [WikiSource](https://en.wikisource.org/wiki/Main_Page), an online library of source texts in the public domain.
-AcrosticFinder reaches recall of over 60% within the first 100 results it returns, and recall rises to up to 80% when considering more results.
+We have created the [Acrostic Identification Task Dataset](https://github.com/acrostics/acrostic-identification-task-dataset) by manually identifying all poems explicitly referred to or formatted as acrostics on English, Russian, and French subdomains of [WikiSource](https://en.wikisource.org/wiki/Main_Page), an online library of source texts in the public domain.
+AcrosticFinder reaches recall of over 50% within the first 100 results it returns for English and Russian, and recall rises to up to 80% when considering more results.
 Read more in our [paper]():
 
-![](data/recall.png)
+![](RecallFigure.png)
 
 ## How to reproduce our results?
 
@@ -117,21 +123,15 @@ Note that you might need over 60 GB of free disk space, a fast internet connecti
 As a faster verification alternative, we strongly recommend that you try out our [Hello World Example](#hello-world-example).
 
 Please use a Mac OS or Ubuntu machine to reproduce the results.
-
-First, make sure that you clone this directory with the `--recursive` flag, so that it also includes the necessary submodules.
 While these typically are preinstalled on Linux and Mac OS machines, you will need `curl`, `bzip2`, and `python3` throughout this process.
 Your python environment must also have `pylcs`, `numpy`, and `matplotlib` installed (`pip3 install pylcs numpy matplotlib`)
 
-**You can use the [get_wikisource_data.sh](data/get_wikisource_data.sh) script to download and preprocess WikiSource dumps that we used in our evaluation.**
-The script uses [wikiextractor](https://github.com/Dargones/wikiextractor) (included as a submodule) to parse raw WikiSource files.
-These include:
-- [April 20th 2024 dump of the English WikiSource](https://dumps.wikimedia.org/enwikisource/20240420/enwikisource-20240420-pages-meta-current.xml.bz2)
-- [May 1st 2024 dump of the French WikiSource](https://dumps.wikimedia.org/frwikisource/20240501/frwikisource-20240501-pages-meta-current.xml.bz2)
-- [May 1st 2024 dump of the Russian WikiSource](https://dumps.wikimedia.org/ruwikisource/20240501/ruwikisource-20240501-pages-meta-current.xml.bz2)
+First, clone this directory with the `--recursive` flag, so that it also includes the necessary submodules.
+Next, follow the directions for [downloading and setting up the Acrostic Identification Task Dataset](https://github.com/acrostics/acrostic-identification-task-dataset/blob/main/README.md), which is cloned as a submodule for this repository in the `data` directory.
+Make sure to run the [get_data.sh](https://github.com/acrostics/acrostic-identification-task-dataset/blob/main/get_data.sh) script as discussed in the README linked above.
 
-To measure the recall that AcrosticFinder achieves on the [Acrostic Identification Task Dataset](link here), you can then 
-run [evaluate_on_wikisource.sh](data/evaluate_on_wikisource.sh). 
-The script will the recall graph you see above and in the paper. 
+Finally, to run AcrosticFinder on the dataset and measure its recall, run [data/evaluate_on_acrostics-identification-task-dataset.sh](data/evaluate_on_acrostics-identification-task-dataset.sh). 
+The script will save the output files in the `output` directory and produce `recall.png` figure that plots the recall graph you see above and in the paper. 
 
 ## How to cite this?
 
