@@ -22,6 +22,7 @@ public class LanguageModel {
                 String[] line = sc.nextLine().split("\t");
                 if ((line.length == 0) || Arrays.stream(TOKENS_TO_IGNORE).anyMatch(token -> token.equals(line[0])))
                     continue;
+                System.err.println("Adding a token");
                 tokenFrequencies.put(line[0], Math.pow(Math.E, Double.parseDouble(line[1])));  // TODO: Use logs
             }
         } catch (Exception e) {
