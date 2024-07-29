@@ -1,6 +1,7 @@
 package acrostics;
 
 import java.io.File;
+import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Scanner;
@@ -18,8 +19,9 @@ public class LanguageModel {
         filename = filename + FILE_POSTFIX;
         System.err.println("In constructor");
         try {
-            Scanner sc = new Scanner(new File(filename));
+            Scanner sc = new Scanner(new File(filename), StandardCharsets.UTF_8);
             System.err.println("Reading file: " + filename);
+            System.err.println("Reading file: " + new File(filename).getAbsolutePath());
             while (sc.hasNextLine()) {
                 String[] line = sc.nextLine().split("\t");
                 if ((line.length == 0) || Arrays.stream(TOKENS_TO_IGNORE).anyMatch(token -> token.equals(line[0]))) {
