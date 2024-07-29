@@ -20,7 +20,7 @@ public class LanguageModel {
         filename = filename + FILE_POSTFIX;
         System.err.println("In constructor");
         try {
-            Scanner sc = new Scanner(Paths.get(filename), StandardCharsets.UTF_8);
+            Scanner sc = new Scanner(Paths.get(filename), "UTF-8");
             System.err.println("Reading file: " + filename);
             System.err.println("Reading file: " + new File(filename).getAbsolutePath());
             while (sc.hasNextLine()) {
