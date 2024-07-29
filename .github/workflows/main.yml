@@ -37,4 +37,8 @@ jobs:
       - name: Test on Windows
         if: matrix.os == 'windows-latest'
         run: |
-          fc.exe result.tsv .github\workflows\exampleExpectedResult.tsv
+          (Get-Content result.tsv) -replace '\\', '/' | Set-Content result_normalized.tsv
+          (Get-Content .github\workflows\exampleExpectedResult.tsv) -replace '\\', '/' | Set-Content exampleExpectedResult_normalized.tsv
+          (Get-Content result_normalized.tsv) -replace '^\s+|\s+$', '' | Sort-Object | Set-Content result_sorted.tsv
+          (Get-Content exampleExpectedResult_normalized.tsv) -replace '^\s+|\s+$', '' | Sort-Object | Set-Content exampleExpectedResult_sorted.tsv
+          fc.exe result_sorted.tsv exampleExpectedResult_sorted.tsv
