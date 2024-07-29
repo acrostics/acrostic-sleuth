@@ -136,4 +136,4 @@ The script will save the output files in the `output` directory and produce `rec
 
 ## How to cite this?
 
-Fedchin, A., Cooperman, I., Chaudhuri, P., Dexter, J.P. 2024 "The Search for Acrostics: Identifying Hidden Messages in World Literature". Forthcoming
+Fedchin, A., Cooperman, I., Chaudhuri, P., Dexter, J.P. 2024 "AcrosticScout: Differentiating True Acrostics from Random Noise in Multilingual Corpora Using Probabilistic Ranking". Forthcoming
