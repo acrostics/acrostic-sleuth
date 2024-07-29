@@ -1,28 +1,28 @@
-# AcrosticFinder
+# AcrosticScout
 
-AcrosticFinder is a program for identifying and ranking acrostics. 
+AcrosticScout is a program for identifying and ranking acrostics. 
 At a high level, the tool works by comparing the probability of random occurrence with the probability that a sequence of characters forms a meaningful word or phrase in the target language.
-AcrosticFinder is optimized to quickly process gigabytes of text. 
-With the help of AcrosticFinder, we have been able to discover multiple previously unknown acrostics, including the English philosopher's Thomas Hobbes signature in *The Elements of Law* (THOMAS[OF]HOBBES).
+AcrosticScout is optimized to quickly process gigabytes of text. 
+With the help of AcrosticScout, we have been able to discover multiple previously unknown acrostics, including the English philosopher's Thomas Hobbes signature in *The Elements of Law* (THOMAS[OF]HOBBES).
 You can read more about the methodology in our upcoming paper ([preprint]()).
 
 ### Table of contents
-- [What languages does AcrosticFinder support?](#what-languages-does-acrosticfinder-support)
-- [How to install and use AcrosticFinder?](#how-to-install-and-use-acrosticfinder)
+- [What languages does AcrosticScout support?](#what-languages-does-acrosticscout-support)
+- [How to install and use AcrosticScout?](#how-to-install-and-use-acrosticscout)
 - [Hello World example](#hello-world-example)
-- [How was AcrosticFinder evaluated?](#how-was-acrosticfinder-evaluated)
+- [How was AcrosticScout evaluated?](#how-was-acrosticscout-evaluated)
 - [How to reproduce our results?](#how-to-reproduce-our-results)
 - [How to cite this?](#how-to-cite-this)
 
-## What languages does AcrosticFinder support?
-AcrosticFinder currently support **English, French, Russian, and Latin**. 
-The only language-specific component of AcrosticFinder is the unigram language model produced by [sentencepiece](https://github.com/google/sentencepiece).
-Support for new languages can, therefore, be easily added -- please [make an issue](https://github.com/acrostics/acrostic-finder/issues/new) here on GitHub if you wish to use AcrosticFinder with another language. 
+## What languages does AcrosticScout support?
+AcrosticScout currently support **English, French, Russian, and Latin**. 
+The only language-specific component of AcrosticScout is the unigram language model produced by [sentencepiece](https://github.com/google/sentencepiece).
+Support for new languages can, therefore, be easily added -- please [make an issue](https://github.com/acrostics/acrostic-scout/issues/new) here on GitHub if you wish to use AcrosticScout with another language. 
 
-## How to install and use AcrosticFinder?
+## How to install and use AcrosticScout?
 
-To run AcrosticFinder, you need Java SDK installed on your machine.
-We have tested AcrosticFinder on Mac OS and Linux.
+To run AcrosticScout, you need Java SDK installed on your machine.
+We have tested AcrosticScout on Mac OS and Linux.
 
 First, compile the code from the base directory using:
 
@@ -30,18 +30,18 @@ First, compile the code from the base directory using:
 javac -encoding UTF-8 -cp src:lib/commons-cli-1.5.0.jar src/acrostics/*.java
 ```
 
-Then run AcrosticFinder using the command below, replacing `INPUT` and `LANG` with the name of the directory that contains the dataset you wish AcrosticFinder to analyze and the language of that dataset, respectively:
+Then run AcrosticScout using the command below, replacing `INPUT` and `LANG` with the name of the directory that contains the dataset you wish AcrosticScout to analyze and the language of that dataset, respectively:
 
 ```bash
 java -cp src:lib/commons-cli-1.5.0.jar acrostics.Main -input INPUT -language LANG
 ```
 
-AcrosticFinder accepts multiple optional command line arguments -- run the tool with the `--help` flag to get the up-to-date list of all available options.
+AcrosticScout accepts multiple optional command line arguments -- run the tool with the `--help` flag to get the up-to-date list of all available options.
 
 ## Hello World example
 
-This repository includes an example dataset comprising a subset of pages with acrostics from the English subdomain of WikiSource database (see [How was AcrosticFinder evaluated?](#how-was-acrosticfinder-evaluated)). 
-You can test AcrosticFinder on this small dataset using:
+This repository includes an example dataset comprising a subset of pages with acrostics from the English subdomain of WikiSource database (see [How was AcrosticScout evaluated?](#how-was-acrosticscout-evaluated)). 
+You can test AcrosticScout on this small dataset using:
 
 ```bash
 java -cp src:lib/commons-cli-1.5.0.jar acrostics.Main -input data/example -language EN -mode LINE -charset utf-8 -outputSize 4000 --concise
@@ -52,7 +52,7 @@ Here is the meaning behind each of the options used:
 - `-language EN`: use the default English language model
 - `-mode LINE`: search for line acrostics (where an acrostic is formed by the initial letters of each line)
 - `-charset utf-8`: use the utf-8 encoding when opening the files
-- `-outputSize 4000`: return top 4000 instances (AcrosticFinder clusters collocated instances, so the actual number of results it returns is much smaller -- 46)
+- `-outputSize 4000`: return top 4000 instances (AcrosticScout clusters collocated instances, so the actual number of results it returns is much smaller -- 46)
 - `--concise`: only report key information (file,acrostic,rank).
 
 Specifically, you should be getting the following output (highest ranked acrostics appear at the bottom of the list):
@@ -107,10 +107,10 @@ data/example/The Old GuardVolume 1Issue 1Acrostic.txt	george▁washington	2.8634
 data/example/The Confessions of William-Henry Ireland.txt	warwick▁at▁dudley▁at▁southampton▁at▁rivers▁at▁shakspeare	8.8067434E+27
 ```
 
-## How was AcrosticFinder evaluated?
+## How was AcrosticScout evaluated?
 
 We have created the [Acrostic Identification Task Dataset](https://github.com/acrostics/acrostic-identification-task-dataset) by manually identifying all poems explicitly referred to or formatted as acrostics on English, Russian, and French subdomains of [WikiSource](https://en.wikisource.org/wiki/Main_Page), an online library of source texts in the public domain.
-AcrosticFinder reaches recall of over 50% within the first 100 results it returns for English and Russian, and recall rises to up to 80% when considering more results.
+AcrosticScout reaches recall of over 50% within the first 100 results it returns for English and Russian, and recall rises to up to 80% when considering more results.
 Read more in our [paper]():
 
 ![](RecallFigure.svg)
@@ -130,7 +130,7 @@ First, clone this directory with the `--recursive` flag, so that it also include
 Next, follow the directions for [downloading and setting up the Acrostic Identification Task Dataset](https://github.com/acrostics/acrostic-identification-task-dataset/blob/main/README.md), which is cloned as a submodule for this repository in the `data` directory.
 Make sure to run the [get_data.sh](https://github.com/acrostics/acrostic-identification-task-dataset/blob/main/get_data.sh) script as discussed in the README linked above.
 
-Finally, to run AcrosticFinder on the dataset and measure its recall, run [data/evaluate_on_acrostics-identification-task-dataset.sh](data/evaluate_on_acrostics-identification-task-dataset.sh). 
+Finally, to run AcrosticScout on the dataset and measure its recall, run [data/evaluate_on_acrostics-identification-task-dataset.sh](data/evaluate_on_acrostics-identification-task-dataset.sh). 
 The script will save the output files in the `output` directory and produce `recall.png` figure that plots the recall graph you see above and in the paper. 
 
 ## How to cite this?
