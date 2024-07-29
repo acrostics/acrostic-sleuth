@@ -113,7 +113,7 @@ We have created the [Acrostic Identification Task Dataset](https://github.com/ac
 AcrosticFinder reaches recall of over 50% within the first 100 results it returns for English and Russian, and recall rises to up to 80% when considering more results.
 Read more in our [paper]():
 
-![](RecallFigure.png)
+![](RecallFigure.svg)
 
 ## How to reproduce our results?
 

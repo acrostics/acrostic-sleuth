@@ -21,6 +21,9 @@ models/*
 !models/RU_cm.csv
 !models/FR.vocab
 !models/FR_cm.csv
+EN_Figure.svg
+RU_Figure.svg
+FR_Figure.svg
 
 # Compiled class file
 *.class
