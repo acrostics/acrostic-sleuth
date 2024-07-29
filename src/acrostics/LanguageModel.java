@@ -12,7 +12,7 @@ public class LanguageModel {
     public final static String[] TOKENS_TO_IGNORE = {"<s>", "<unk>", "</s>"};
     public final static char SPECIAL = '▁'; // special character to indicate space
     public final HashMap<String,Double> tokenFrequencies = new HashMap<>();
-    private int longestToken = -1;
+    public final int longestToken;
 
     public LanguageModel(String filename) {
         filename = filename + FILE_POSTFIX;
@@ -28,18 +28,17 @@ public class LanguageModel {
             System.err.println("Failed to read file: " + filename);
             exit(1);
         }
-        getLongest();
+        longestToken = getLongest();
     }
 
-    public int getLongest() {
-        if (longestToken == -1) {
-            for (String token: tokenFrequencies.keySet()) {
-                if (token.length() > longestToken) {
-                    longestToken = token.length();
-                }
+    private int getLongest() {
+        int longest = 0;
+        for (String token: tokenFrequencies.keySet()) {
+            if (token.length() > longest) {
+                longest = token.length();
             }
         }
-        return longestToken;
+        return longest;
     }
 
     public double p(String s, boolean withSpace) {

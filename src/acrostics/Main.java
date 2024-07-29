@@ -16,7 +16,7 @@ public class Main {
     public static void main(String[] args) {
         CLO clo = new CLO();
         int exitCode = new CommandLine(clo).execute(args);
-        if (exitCode != 0) {
+        if (exitCode != 0 || clo.texts == null || clo.texts.length == 0) {
             System.exit(exitCode);
         }
         find(clo, System.out, null);

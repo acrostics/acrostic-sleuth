@@ -28,7 +28,7 @@ public class AcrosticGenerator implements Runnable {
         Acrostic currentBest = heap.peek();
         Acrostic[][] dynamicProgrammingArray = new Acrostic[clo.maxLength+1][];
         for (int i = 0; i < clo.maxLength + 1; i++) {
-            dynamicProgrammingArray[i] = new Acrostic[lm.getLongest()];
+            dynamicProgrammingArray[i] = new Acrostic[lm.longestToken];
         }
         int[] repetitions = {0, 0, 0, 0, 0, 0, 0};
         int lastRepetition = 0;
@@ -38,7 +38,7 @@ public class AcrosticGenerator implements Runnable {
                 documentBreak++;
                 repetitions = new int[] {0, 0, 0, 0, 0, 0, 0};
                 for (int i = 0; i < clo.maxLength + 1; i++) {
-                    dynamicProgrammingArray[i] = new Acrostic[lm.getLongest()];
+                    dynamicProgrammingArray[i] = new Acrostic[lm.longestToken];
                 }
                 lastRepetition = text.documentBreaks.get(documentBreak).line;
             }
@@ -60,10 +60,10 @@ public class AcrosticGenerator implements Runnable {
                 lastRepetition = end;
                 continue;
             }
-            double[] lastLMP = new double[lm.getLongest()+1];
-            double[] lastLMPWithSpace = new double[lm.getLongest()+1];
-            String[] lastWord = new String[lm.getLongest()+1];
-            for (int start = max(0, end - lm.getLongest()); start < end; start++) {
+            double[] lastLMP = new double[lm.longestToken+1];
+            double[] lastLMPWithSpace = new double[lm.longestToken+1];
+            String[] lastWord = new String[lm.longestToken+1];
+            for (int start = max(0, end - lm.longestToken); start < end; start++) {
                 lastWord[end-start] = text.subString(start, end);
                 lastLMP[end-start] = lm.p(lastWord[end-start], false);
                 lastLMPWithSpace[end-start] = lm.p(lastWord[end-start], true);
@@ -74,31 +74,31 @@ public class AcrosticGenerator implements Runnable {
                 int len = end - start; // length of the potential acrostic
                 String bestStr = null;
                 double bestLMP = 0;
-                for (int k = max(0, len - lm.getLongest()); k < len; k++) {
+                for (int k = max(0, len - lm.longestToken); k < len; k++) {
                     // k is the index, within the acrostic string, of the first character after the last token
                     double prevLMP = 0;
                     if (k == 0) {
                         prevLMP = 1;
-                    } else if (dynamicProgrammingArray[k][(start+k)%(lm.getLongest())] != null) {
-                        prevLMP = dynamicProgrammingArray[k][(start+k)%(lm.getLongest())].LMP;
+                    } else if (dynamicProgrammingArray[k][(start+k)%(lm.longestToken)] != null) {
+                        prevLMP = dynamicProgrammingArray[k][(start+k)%(lm.longestToken)].LMP;
                     }
                     boolean hasSpace = false;
                     double LMP = 0;
-                    if (k == 0 || dynamicProgrammingArray[k][(start+k)%(lm.getLongest())] == null || lastLMPWithSpace[end - start - k] > lastLMP[end - start - k]) {
+                    if (k == 0 || dynamicProgrammingArray[k][(start+k)%(lm.longestToken)] == null || lastLMPWithSpace[end - start - k] > lastLMP[end - start - k]) {
                         hasSpace = true;
                         LMP = prevLMP * lastLMPWithSpace[end - start - k];
                     } else {
                         LMP = prevLMP * lastLMP[end - start - k];
                     }
                     if ((bestStr == null) || (LMP > bestLMP)) {
-                        if (k == 0 || dynamicProgrammingArray[k][(start+k)%(lm.getLongest())] == null) {
+                        if (k == 0 || dynamicProgrammingArray[k][(start+k)%(lm.longestToken)] == null) {
                             bestStr = lastWord[end-start-k];
                             bestLMP = LMP;
-                        } else if (!dynamicProgrammingArray[k][(start+k)%(lm.getLongest())].lastWord.equals(lastWord[end-start-k])) {
+                        } else if (!dynamicProgrammingArray[k][(start+k)%(lm.longestToken)].lastWord.equals(lastWord[end-start-k])) {
                             if (hasSpace) {
-                                bestStr = dynamicProgrammingArray[k][(start+k)%(lm.getLongest())].acrostic + LanguageModel.SPECIAL + lastWord[end-start-k];
+                                bestStr = dynamicProgrammingArray[k][(start+k)%(lm.longestToken)].acrostic + LanguageModel.SPECIAL + lastWord[end-start-k];
                             } else {
-                                bestStr = dynamicProgrammingArray[k][(start+k)%(lm.getLongest())].acrostic + lastWord[end-start-k];
+                                bestStr = dynamicProgrammingArray[k][(start+k)%(lm.longestToken)].acrostic + lastWord[end-start-k];
                             }
                             bestLMP = LMP;
                         }
@@ -118,7 +118,7 @@ public class AcrosticGenerator implements Runnable {
                         heap.offer(acrostic);
                     }
                 }
-                dynamicProgrammingArray[len][end % lm.getLongest()] = acrostic;
+                dynamicProgrammingArray[len][end % lm.longestToken] = acrostic;
             }
         }
     }
