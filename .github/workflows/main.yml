@@ -24,8 +24,17 @@ jobs:
           fetch-depth: 0
           submodules: true
 
-      - name: Test
+      - name: Compile and Run
         run: |
           javac -encoding UTF-8 -cp src src/acrostics/*.java
           java -cp src acrostics.Main -input data/example -language EN -mode LINE -charset utf-8 -outputSize 4000 --concise > result.tsv
+
+      - name: Test on Mac or Ubuntu
+        if: matrix.os != 'windows-latest'
+        run: |
           diff -w result.tsv .github/workflows/exampleExpectedResult.tsv
+
+      - name: Test on Windows
+        if: matrix.os == 'windows-latest'
+        run: |
+          fc result.tsv .github\workflows\exampleExpectedResult.tsv
