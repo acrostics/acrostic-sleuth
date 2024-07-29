@@ -16,8 +16,10 @@ public class LanguageModel {
 
     public LanguageModel(String filename) {
         filename = filename + FILE_POSTFIX;
+        System.err.println("In constructor");
         try {
             Scanner sc = new Scanner(new File(filename));
+            System.err.println("Reading file: " + filename);
             while (sc.hasNextLine()) {
                 String[] line = sc.nextLine().split("\t");
                 if ((line.length == 0) || Arrays.stream(TOKENS_TO_IGNORE).anyMatch(token -> token.equals(line[0])))
