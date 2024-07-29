@@ -22,8 +22,10 @@ public class LanguageModel {
             System.err.println("Reading file: " + filename);
             while (sc.hasNextLine()) {
                 String[] line = sc.nextLine().split("\t");
-                if ((line.length == 0) || Arrays.stream(TOKENS_TO_IGNORE).anyMatch(token -> token.equals(line[0])))
+                if ((line.length == 0) || Arrays.stream(TOKENS_TO_IGNORE).anyMatch(token -> token.equals(line[0]))) {
+                    System.err.println("Skipping line");
                     continue;
+                }
                 System.err.println("Adding a token");
                 tokenFrequencies.put(line[0], Math.pow(Math.E, Double.parseDouble(line[1])));  // TODO: Use logs
             }
