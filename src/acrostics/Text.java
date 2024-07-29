@@ -190,9 +190,8 @@ public class Text {
         int line;
 
         public DocumentBreak(String name, int line) {
-            this.name = name;
+            this.name = name.replace('\\', '/'); // Normalize the file path
             this.line = line;
         }
-
     }
 }
