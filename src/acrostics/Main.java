@@ -48,10 +48,6 @@ public class Main {
             cm.load(clo.models);
         }
         lm = new LanguageModel(clo.models);
-        if (lm.longestToken == 0) {
-            System.err.println("Internal Error");
-            System.exit(1);
-        }
 
         System.err.println("Enumerating possible acrostics...");
         BoundedPriorityBlockingQueue<Acrostic> acrostics =
