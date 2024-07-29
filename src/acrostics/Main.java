@@ -14,7 +14,11 @@ import java.util.concurrent.TimeUnit;
 public class Main {
 
     public static void main(String[] args) {
-        CLO clo = new CLO(args);
+        CLO clo = new CLO();
+        int exitCode = new CommandLine(clo).execute(args);
+        if (exitCode != 0) {
+            System.exit(exitCode);
+        }
         find(clo, System.out, null);
     }
     public static void find(CLO clo, PrintStream printStream, LanguageModel lm) {

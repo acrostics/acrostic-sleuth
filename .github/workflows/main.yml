@@ -24,17 +24,8 @@ jobs:
           fetch-depth: 0
           submodules: true
 
-      - name: Compile on Mac or Ubuntu
-        if: matrix.os != 'windows-latest'
-        run: |
-            javac -encoding UTF-8 -cp src:lib/commons-cli-1.5.0.jar src/acrostics/*.java
-
-      - name: Compile on Windows
-        if: matrix.os == 'windows-latest'
-        run: |
-            javac -encoding UTF-8 -cp src:lib/commons-cli-1.5.0.jar src/acrostics/*.java
-
       - name: Test
         run: |
-          java -cp src:lib/commons-cli-1.5.0.jar acrostics.Main -input data/example -language EN -mode LINE -charset utf-8 -outputSize 4000 --concise > result.tsv
+          javac -encoding UTF-8 -cp src src/acrostics/*.java
+          java -cp src acrostics.Main -input data/example -language EN -mode LINE -charset utf-8 -outputSize 4000 --concise > result.tsv
           diff -w result.tsv .github/workflows/exampleExpectedResult.tsv
