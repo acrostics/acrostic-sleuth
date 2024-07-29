@@ -36,7 +36,7 @@ Then run AcrosticSleuth using the command below, replacing `INPUT` and `LANG` wi
 java -cp src acrostics.Main -input INPUT -language LANG
 ```
 
-AcrosticSleuth accepts multiple optional command line arguments (thank you, [picocli](https://github.com/remkop/picocli/tree/v4.7.6)) -- run the tool with the `--help` flag to get the up-to-date list of all available options.
+AcrosticSleuth accepts multiple optional command line arguments (thank you, [picocli](https://github.com/remkop/picocli/tree/v4.7.6)) -- run the tool with the `--h` flag to get the up-to-date list of all available options.
 
 ## Hello World example
 
@@ -120,7 +120,7 @@ Read more in our [paper]():
 
 This section describes the steps for reproducing results we report in the accompanying [paper](), 
 in particular for producing the graph we show above.
-Note that you might need over 60 GB of free disk space, a fast internet connection, and up to several hours of your time to fully reproduce the results.
+Note that you might need over 60 GB of free disk space, a fast internet connection, and, depending on your machine, up to several hours to fully download the dataset and reproduce the results.
 As a faster verification alternative, we strongly recommend that you try out our [Hello World Example](#hello-world-example).
 
 Please use a Mac OS or Ubuntu machine to reproduce the results.
@@ -132,7 +132,7 @@ Next, follow the directions for [downloading and setting up the Acrostic Identif
 Make sure to run the [get_data.sh](https://github.com/acrostics/acrostic-identification-task-dataset/blob/main/get_data.sh) script as discussed in the README linked above.
 
 Finally, to run AcrosticSleuth on the dataset and measure its recall, run [data/evaluate_on_acrostics-identification-task-dataset.sh](data/evaluate_on_acrostics-identification-task-dataset.sh). 
-The script will save the output files in the `output` directory and produce `recall.png` figure that plots the recall graph you see above and in the paper. 
+The script will save the output files in the `output` directory and produce `RecallFigure.png` figure that plots the recall graph you see above and in the paper. 
 
 ## How to cite this?
 
