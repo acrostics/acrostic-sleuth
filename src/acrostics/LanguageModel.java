@@ -12,7 +12,7 @@ public class LanguageModel {
 
     private static final String FILE_POSTFIX = ".vocab";
     public final static String[] TOKENS_TO_IGNORE = {"<s>", "<unk>", "</s>"};
-    public final static char SPECIAL = '▁'; // special character to indicate space
+    public final static char SPECIAL = '_'; // special character to indicate space
     public final HashMap<String,Double> tokenFrequencies = new HashMap<>();
     public final int longestToken;
 
