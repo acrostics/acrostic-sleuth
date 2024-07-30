@@ -9,6 +9,7 @@ data/en
 data/ru
 data/fr
 data/tmp
+data/PoetiDItalia
 data/*.xml
 .DS_Store
 python/.DS_Store
