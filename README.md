@@ -17,7 +17,7 @@ You can read more about the methodology in our upcoming paper ([link to preprint
 ## What languages does AcrosticSleuth support?
 AcrosticSleuth currently support **English, French, Russian, and Latin**. 
 The only language-specific component of AcrosticSleuth is the unigram language model produced by [sentencepiece](https://github.com/google/sentencepiece).
-Support for new languages can, therefore, be easily added -- please [make an issue](https://github.com/acrostics/acrostic-sleuth/issues/new) here on GitHub if you wish to use AcrosticSleuth with another language. 
+Support for new languages can, therefore, be easily added -- please [make an issue](https://github.com/acrostics/acrostic-sleuth/issues/new) here on GitHub if you would like to use AcrosticSleuth with another language. 
 
 ## How to install and use AcrosticSleuth?
 
