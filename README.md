@@ -4,7 +4,7 @@ AcrosticSleuth is a program for identifying and ranking acrostics.
 At a high level, the tool works by comparing the probability of random occurrence with the probability that a sequence of characters forms a meaningful word or phrase in the target language.
 AcrosticSleuth is optimized to quickly process gigabytes of text. 
 With the help of AcrosticSleuth, we have been able to discover multiple previously unknown acrostics, including the English philosopher's Thomas Hobbes signature in *The Elements of Law* (THOMAS[OF]HOBBES).
-You can read more about the methodology in our upcoming paper ([preprint]()).
+You can read more about the methodology in our upcoming paper ([link to preprint to appear soon]()).
 
 ### Table of contents
 - [What languages does AcrosticSleuth support?](#what-languages-does-acrosticsleuth-support)
@@ -112,13 +112,13 @@ data/example/The Confessions of William-Henry Ireland.txt       warwick_at_dudle
 
 We have created the [Acrostic Identification Task Dataset](https://github.com/acrostics/acrostic-identification-task-dataset) by manually identifying all poems explicitly referred to or formatted as acrostics on English, Russian, and French subdomains of [WikiSource](https://en.wikisource.org/wiki/Main_Page), an online library of source texts in the public domain.
 AcrosticSleuth reaches recall of over 50% within the first 100 results it returns for English and Russian, and recall rises to up to 80% when considering more results.
-Read more in our [paper]():
+Read more in our paper ([link to preprint to appear soon]()):
 
 ![](RecallFigure.svg)
 
 ## How to reproduce our results?
 
-This section describes the steps for reproducing results we report in the accompanying [paper](), 
+This section describes the steps for reproducing results we report in the accompanying paper ([link to preprint to appear soon]()), 
 in particular for producing the graph we show above.
 Note that you might need over 60 GB of free disk space, a fast internet connection, and, depending on your machine, up to several hours to fully download the dataset and reproduce the results.
 As a faster verification alternative, we strongly recommend that you try out our [Hello World Example](#hello-world-example).
@@ -136,4 +136,4 @@ The script will save the output files in the `output` directory and produce `Rec
 
 ## How to cite this?
 
-Fedchin, A., Cooperman, I., Chaudhuri, P., Dexter, J.P. 2024 "AcrosticSleuth: Differentiating True Acrostics from Random Noise in Multilingual Corpora Using Probabilistic Ranking". Forthcoming
+Fedchin, A., Cooperman, I., Chaudhuri, P., Dexter, J.P. 2024 "AcrosticSleuth: Probabilistic Differentiation and Ranking of True Acrostics in Multilingual Corpora". Forthcoming
