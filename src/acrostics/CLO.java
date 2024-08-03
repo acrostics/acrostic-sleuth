@@ -25,7 +25,7 @@ public class CLO implements Callable<Integer> {
     @Option(names = {"-models", "--models"}, description = "Prefix for a language model file.", hidden = true)
     public String models;
 
-    @Option(names = {"-maxLength", "--maxLength"}, description = "Maximum length of an acrostic (in characters). AcrosticScout will cluster longer acrostics together, so you probably don't want to modify this option.")
+    @Option(names = {"-maxLength", "--maxLength"}, description = "Maximum length of an acrostic (in characters).")
     public int maxLength = MAX_LENGTH_DEFAULT;
 
     @Option(names = {"-workers", "--workers"}, description = "Number of threads to use")
