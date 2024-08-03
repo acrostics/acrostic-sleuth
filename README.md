@@ -96,7 +96,7 @@ We have tested AcrosticSleuth on Mac, Mac-Arm, Ubuntu, and Windows [as part of o
 The following two commands should build the jar file for you:
 
 ```bash
-javac -d out -cp src src/acrosticsleuth/*.java 
+javac -encoding UTF-8 -d out -cp src src/acrosticsleuth/*.java 
 jar cfe AcrosticSleuth.jar acrosticsleuth.Main -C out . -C models .
 ```
 
