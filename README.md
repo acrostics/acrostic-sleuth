@@ -21,7 +21,7 @@ Support for new languages can, therefore, be easily added -- please [make an iss
 
 ## Demo
 
-To run AcrosticSleuth, you need Java Runtime installed on your machine (which you probably do).
+To run AcrosticSleuth, you need Java 8 or higher installed on your machine (which is likely already the case).
 
 This repository includes a demo dataset comprising a subset of pages with acrostics from the English subdomain of the WikiSource database (see [How was AcrosticSleuth evaluated?](#how-was-acrosticsleuth-evaluated)). 
 You can test AcrosticSleuth on this small dataset using:
