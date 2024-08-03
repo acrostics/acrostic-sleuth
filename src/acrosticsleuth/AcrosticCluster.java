@@ -1,10 +1,10 @@
-package acrostics;
+package acrosticsleuth;
 
 import java.math.BigDecimal;
 import java.math.MathContext;
 import java.util.*;
 
-import static acrostics.LanguageModel.SPECIAL;
+import static acrosticsleuth.LanguageModel.SPECIAL;
 
 public class AcrosticCluster implements Comparable<AcrosticCluster> {
 

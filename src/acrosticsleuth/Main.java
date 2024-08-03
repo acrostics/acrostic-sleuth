@@ -1,10 +1,6 @@
-package acrostics;
+package acrosticsleuth;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
 import java.io.PrintStream;
-import java.nio.charset.Charset;
 import java.util.*;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
@@ -19,35 +15,16 @@ public class Main {
         if (exitCode != 0 || clo.texts == null || clo.texts.length == 0) {
             System.exit(exitCode);
         }
-        find(clo, System.out, null);
+        find(clo, System.out);
     }
-    public static void find(CLO clo, PrintStream printStream, LanguageModel lm) {
-        CharModel cm = new CharModel();
+    public static void find(CLO clo, PrintStream printStream) {
         Text[] texts = new Text[clo.texts.length];
 
         for (int i = 0; i < clo.texts.length; i++) {
             texts[i] = new Text(clo.texts[i].getPath(), clo);
         }
 
-        if (clo.models == null
-                || !new File(clo.models + CharModel.FILE_POSTFIX).exists()) {
-            System.err.println("Building language models...");
-            for (int i = 0; i < texts.length; i++) {
-                System.err.print(i + " out of " +clo.texts.length + "\r");
-                texts[i].load(cm,false, false);
-                if (texts[i].isEmpty()) {
-                    System.err.println(texts[i].location + " is empty");
-                }
-            }
-            if (clo.models != null) {
-                System.err.println("Saving language models...");
-                cm.save(clo.models);
-            }
-        } else {
-            System.err.println("Loading language models...");
-            cm.load(clo.models);
-        }
-        lm = new LanguageModel(clo.models);
+        System.err.println("Loading language models...");
 
         System.err.println("Enumerating possible acrostics...");
         BoundedPriorityBlockingQueue<Acrostic> acrostics =
@@ -59,7 +36,7 @@ public class Main {
         for (Text text : texts) {
             taskCount++;
             AcrosticGenerator acrosticGenerator = new AcrosticGenerator(
-                    acrostics, text, clo, cm, lm);
+                    acrostics, text, clo, clo.charModel, clo.languageModel);
             executor.execute(acrosticGenerator);
         }
         executor.shutdown();

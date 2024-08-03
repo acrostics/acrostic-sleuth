@@ -1,4 +1,4 @@
-package acrostics;
+package acrosticsleuth;
 
 import java.util.concurrent.PriorityBlockingQueue;
 import java.util.concurrent.locks.ReentrantLock;

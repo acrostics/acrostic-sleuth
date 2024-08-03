@@ -1,16 +1,16 @@
-package acrostics;
+package acrosticsleuth;
 
 import java.io.File;
+import java.io.InputStream;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.Callable;
 
-import acrostics.CommandLine.Option;
-import acrostics.CommandLine.Command;
+import acrosticsleuth.CommandLine.Option;
+import acrosticsleuth.CommandLine.Command;
 
 @Command(name = "CLO", mixinStandardHelpOptions = true, description = "Scout a corpus for acrostics")
 public class CLO implements Callable<Integer> {
@@ -22,8 +22,8 @@ public class CLO implements Callable<Integer> {
     @Option(names = {"-outputSize", "--outputSize"}, description = "Max number of potential acrostics to print")
     public int outputSize = OUTPUT_SIZE_DEFAULT;
 
-    @Option(names = {"-models", "--models"}, description = "Prefix for a language model file.", hidden = true)
-    public String models;
+    public LanguageModel languageModel;
+    public CharModel charModel;
 
     @Option(names = {"-maxLength", "--maxLength"}, description = "Maximum length of an acrostic (in characters).")
     public int maxLength = MAX_LENGTH_DEFAULT;
@@ -67,9 +67,21 @@ public class CLO implements Callable<Integer> {
 
         AcrosticCluster.concise = concise;
 
-        if (models == null) {
-            models = Paths.get("models", language.label).toString();
+        ClassLoader classLoader = Main.class.getClassLoader();
+        InputStream lmResource, cmResource;
+        try {
+            lmResource = classLoader.getResourceAsStream(language.label + LanguageModel.FILE_POSTFIX);
+            cmResource = classLoader.getResourceAsStream(language.label + CharModel.FILE_POSTFIX);
+        } catch (Exception e) {
+            System.err.println("Could not load resource.\n" + e.getMessage());
+            return 1;
         }
+        if (lmResource == null || cmResource == null) {
+            System.err.println("Loaded resource is null.\n");
+            return 1;
+        }
+        languageModel = new LanguageModel(lmResource);
+        charModel = new CharModel(cmResource);
 
         return 0;
     }

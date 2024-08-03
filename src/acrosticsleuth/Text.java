@@ -1,4 +1,4 @@
-package acrostics;
+package acrosticsleuth;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;

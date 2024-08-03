@@ -1,4 +1,4 @@
-package acrostics;
+package acrosticsleuth;
 
 import static java.lang.Integer.*;
 
