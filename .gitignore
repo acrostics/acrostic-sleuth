@@ -16,6 +16,8 @@ python/.DS_Store
 data/.DS_Store
 python/tmp
 models/*
+out/*
+!out/.gitignore
 !models/EN.vocab
 !models/EN_cm.csv
 !models/RU.vocab
