@@ -26,7 +26,7 @@ jobs:
 
       - name: Run Release
         run: |
-          java -jar AcrosticSleuth.jar -input data/demo -language EN -mode LINE -charset utf-8 -outputSize 4000 --concise > results.tsv
+          java -jar AcrosticSleuth.jar -input data/demo -language EN -mode LINE -charset utf-8 -outputSize 4000 --concise > result.tsv
 
       - name: Test Release on Mac or Ubuntu
         if: matrix.os != 'windows-latest'
@@ -46,7 +46,7 @@ jobs:
         run: |
           javac -d out -cp src src/acrosticsleuth/*.java 
           jar cfe AcrosticSleuth.jar acrosticsleuth.Main -C out . -C models .
-          java -jar AcrosticSleuth.jar -input data/demo -language EN -mode LINE -charset utf-8 -outputSize 4000 --concise > results.tsv
+          java -jar AcrosticSleuth.jar -input data/demo -language EN -mode LINE -charset utf-8 -outputSize 4000 --concise > result.tsv
 
       - name: Test Build on Mac or Ubuntu
         if: matrix.os != 'windows-latest'
