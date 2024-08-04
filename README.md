@@ -3,7 +3,7 @@
 AcrosticSleuth is a program for identifying and ranking acrostics. 
 At a high level, the tool works by comparing the probability of random occurrence with the probability that a sequence of characters forms a meaningful word or phrase in the target language.
 AcrosticSleuth is optimized to quickly process gigabytes of text. 
-With the help of AcrosticSleuth, we have been able to discover multiple previously unknown acrostics, including the English philosopher's Thomas Hobbes signature in *The Elements of Law* (THOMAS[OF]HOBBES).
+With the help of AcrosticSleuth, we have been able to discover multiple previously unknown acrostics.
 You can read more about the methodology in our upcoming paper ([link to preprint to appear soon]()).
 
 ### Table of contents
