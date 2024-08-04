@@ -27,13 +27,12 @@ This repository includes a demo dataset comprising a subset of pages with acrost
 You can test AcrosticSleuth on this small dataset using:
 
 ```bash
-java -jar AcrosticSleuth.jar -input data/demo -language EN -mode LINE -charset utf-8 -outputSize 4000 --concise
+java -jar AcrosticSleuth.jar -input data/demo -language EN -charset utf-8 -outputSize 4000 --concise
 ```
 
 Here is the meaning behind each of the options used:
 - `-input data/demo`: analyze all texts in the `data/demo` directory
 - `-language EN`: use the default English language model
-- `-mode LINE`: search for line acrostics (where an acrostic is formed by the initial letters of each line)
 - `-charset utf-8`: use the utf-8 encoding when opening the files
 - `-outputSize 4000`: return top 4000 instances (AcrosticSleuth clusters collocated instances, so the actual number of results it returns is much smaller -- 46)
 - `--concise`: only report key information (file,acrostic,rank).

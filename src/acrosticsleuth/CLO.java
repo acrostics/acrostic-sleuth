@@ -12,39 +12,42 @@ import java.util.concurrent.Callable;
 import acrosticsleuth.CommandLine.Option;
 import acrosticsleuth.CommandLine.Command;
 
-@Command(name = "CLO", mixinStandardHelpOptions = true, description = "Scout a corpus for acrostics")
+@Command(name = "CLO", mixinStandardHelpOptions = true, description = "Search a corpus for acrostics")
 public class CLO implements Callable<Integer> {
 
-    @Option(names = {"-input", "--input"}, required = true, description = "File or directory with all texts of interest")
+    @Option(names = {"-input", "--input"}, required = true, description = "Directory with input texts")
     private String input; // list of all texts to be processed
     public File[] texts;
 
-    @Option(names = {"-outputSize", "--outputSize"}, description = "Max number of potential acrostics to print")
+    @Option(names = {"-outputSize", "--outputSize"}, description = "Max number of results to print")
     public int outputSize = OUTPUT_SIZE_DEFAULT;
 
     public LanguageModel languageModel;
     public CharModel charModel;
 
-    @Option(names = {"-maxLength", "--maxLength"}, description = "Maximum length of an acrostic (in characters).")
+    @Option(names = {"-maxLength", "--maxLength"}, description = "Maximum allowed length of an acrostic", hidden = true)
     public int maxLength = MAX_LENGTH_DEFAULT;
 
     @Option(names = {"-workers", "--workers"}, description = "Number of threads to use")
     public int workers = WORKERS_DEFAULT;
 
-    @Option(names = {"-mode", "--mode"}, description = "Look for acrostics formed by the first letter of each LINE or WORD")
+    @Option(names = {"-mode", "--mode"}, description = "Look for acrostics formed by the first letters of each LINE or WORD", hidden = true)
     public Mode mode = MODE_DEFAULT;
 
-    @Option(names = {"-charset", "--charset"}, description = "Name of the character encoding to use. Supports utf-8 and windows-1251")
+    @Option(names = {"-charset", "--charset"}, description = "utf-8 or windows-1251")
     public Charset charset = CHARSET_DEFAULT;
 
-    @Option(names = {"-language", "--language"}, required = true, description = "Determines the language of the text: EN, LA, RU, FR")
+    @Option(names = {"-language", "--language"}, required = true, description = "EN, LA, RU, or FR")
     public Language language;
 
-    @Option(names = {"-concise", "--concise"}, description = "Report minimal information -- only the acrostic, the page it comes from, and the rank")
+    @Option(names = {"-concise", "--concise"}, description = "Report results concisely")
     public boolean concise;
 
-    @Option(names = {"-wikisource", "--wikisource"}, description = "Use if the input is a parsed WikiSource database, where there might be several texts per file.")
+    @Option(names = {"-wikisource", "--wikisource"}, description = "Use if running on WikiSource")
     public boolean wikisource;
+
+    @Option(names = {"-help", "--help"}, description = "Show this help message", usageHelp = true)
+    public boolean help;
 
     public static final int MAX_LENGTH_DEFAULT = 50;
     public static final int OUTPUT_SIZE_DEFAULT = 10000;
