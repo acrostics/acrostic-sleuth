@@ -29,6 +29,8 @@ out/*
 EN_Figure.svg
 RU_Figure.svg
 FR_Figure.svg
+PrecisionFigure.svg
+F1Figure.svg
 
 # Compiled class file
 *.class

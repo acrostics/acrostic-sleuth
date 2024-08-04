@@ -41,7 +41,7 @@ Here is the meaning behind each of the options used:
 Specifically, you should be getting the following output (highest ranked acrostics appear at the bottom of the list):
 
 ```
-file,acrostic,rank
+file    acrostic        rank
 data/demo/Flint and Feather (1914)Part 3Canada.txt      canada  1053.8960
 data/demo/Flint and Feather (1914)Part 3Brandon.txt     brandon 3092.9519
 data/demo/The Canadian soldiers' song book.djvu57.txt   mother  3164.0043

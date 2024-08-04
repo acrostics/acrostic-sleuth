@@ -15,8 +15,8 @@ public class AcrosticCluster implements Comparable<AcrosticCluster> {
     private String prefix, postfix, toStringResult;
 
     public static boolean concise = false;
-    public static final String HEADER_CONCISE = "file,acrostic,rank";
-    public static final String HEADER = "file,acrostic,rank,from,to,cluster,from,to,prefix,postfix,sourceText";
+    public static final String HEADER_CONCISE = "file\tacrostic\trank";
+    public static final String HEADER = "file\tacrostic\trank\tfrom\tto\tcluster\tfrom\tto\tprefix\tpostfix\tsourceText";
 
     @Override
     public int compareTo(AcrosticCluster acrosticCluster) {
