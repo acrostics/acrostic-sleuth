@@ -102,7 +102,7 @@ jar cfe AcrosticSleuth.jar acrosticsleuth.Main -C out . -C models .
 
 ## How was AcrosticSleuth evaluated?
 
-We have created the [Acrostic Identification Task Dataset](https://github.com/acrostics/acrostic-identification-task-dataset) by manually identifying all poems explicitly referred to or formatted as acrostics on English, Russian, and French subdomains of [WikiSource](https://en.wikisource.org/wiki/Main_Page), an online library of source texts in the public domain.
+We have created the [Acrostic Identification Dataset](https://github.com/acrostics/acrostic-identification-dataset) (AcrostID) by manually identifying all poems explicitly referred to or formatted as acrostics on English, Russian, and French subdomains of [WikiSource](https://en.wikisource.org/wiki/Main_Page), an online library of source texts in the public domain.
 AcrosticSleuth reaches recall of over 50% within the first 100 results it returns for English and Russian, and recall rises to up to 80% when considering more results.
 Read more in our paper ([link to preprint to appear soon]()):
 
@@ -120,10 +120,10 @@ While these typically are preinstalled on Linux and Mac OS machines, you will ne
 Your python environment must also have `pylcs`, `numpy`, and `matplotlib` installed (`pip3 install pylcs numpy matplotlib`)
 
 First, clone this directory with the `--recursive` flag, so that it also includes the necessary submodules.
-Next, follow the directions for [downloading and setting up the Acrostic Identification Task Dataset](https://github.com/acrostics/acrostic-identification-task-dataset/blob/main/README.md), which is cloned as a submodule for this repository in the `data` directory.
-Make sure to run the [get_data.sh](https://github.com/acrostics/acrostic-identification-task-dataset/blob/main/get_data.sh) script as discussed in the README linked above.
+Next, follow the directions for [downloading and setting up the Acrostic Identification Dataset](https://github.com/acrostics/acrostic-identification-dataset/blob/main/README.md), which is cloned as a submodule for this repository in the `data` directory.
+Make sure to run the [get_data.sh](https://github.com/acrostics/acrostic-identification-dataset/blob/main/get_data.sh) script as discussed in the README linked above.
 
-Finally, to run AcrosticSleuth on the dataset and measure its recall, run [data/evaluate_on_acrostics-identification-task-dataset.sh](data/evaluate_on_acrostics-identification-task-dataset.sh). 
+Finally, to run AcrosticSleuth on the dataset and measure its recall, run [data/evaluate_on_acrostics-identification-dataset.sh](data/evaluate_on_acrostics-identification-dataset.sh). 
 The script will save the output files in the `output` directory and produce `RecallFigure.png` figure that plots the recall graph you see above and in the paper. 
 
 ## How to cite this?
