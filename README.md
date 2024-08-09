@@ -4,7 +4,7 @@ AcrosticSleuth is a program for identifying and ranking acrostics.
 At a high level, the tool works by comparing the probability of random occurrence with the probability that a sequence of characters forms a meaningful word or phrase in the target language.
 AcrosticSleuth is optimized to quickly process gigabytes of text. 
 With the help of AcrosticSleuth, we have been able to discover multiple previously unknown acrostics.
-You can read more about the methodology in our upcoming paper ([link to preprint to appear soon]()).
+You can read more about the methodology in our upcoming paper ([link to preprint](https://doi.org/10.48550/arXiv.2408.04427)).
 
 ### Table of contents
 - [What languages does AcrosticSleuth support?](#what-languages-does-acrosticsleuth-support)
@@ -16,7 +16,7 @@ You can read more about the methodology in our upcoming paper ([link to preprint
 
 ## What languages does AcrosticSleuth support?
 AcrosticSleuth currently support **English, French, Russian, and Latin**. 
-The only language-specific component of AcrosticSleuth is the unigram language model produced by [sentencepiece](https://github.com/google/sentencepiece).
+The only language-specific component of AcrosticSleuth is the unigram language model produced by [SentencePiece](https://github.com/google/sentencepiece).
 Support for new languages can, therefore, be easily added -- please [make an issue](https://github.com/acrostics/acrostic-sleuth/issues/new) here on GitHub if you would like to use AcrosticSleuth with another language. 
 
 ## Demo
@@ -104,13 +104,13 @@ jar cfe AcrosticSleuth.jar acrosticsleuth.Main -C out . -C models .
 
 We have created the [Acrostic Identification Dataset](https://github.com/acrostics/acrostic-identification-dataset) (AcrostID) by manually identifying all poems explicitly referred to or formatted as acrostics on English, Russian, and French subdomains of [WikiSource](https://en.wikisource.org/wiki/Main_Page), an online library of source texts in the public domain.
 AcrosticSleuth reaches recall of over 50% within the first 100 results it returns for English and Russian, and recall rises to up to 80% when considering more results.
-Read more in our paper ([link to preprint to appear soon]()):
+Read more in our paper ([link to preprint](https://doi.org/10.48550/arXiv.2408.04427)):
 
 ![](RecallFigure.svg)
 
 ## How to reproduce our results?
 
-This section describes the steps for reproducing results we report in the accompanying paper ([link to preprint to appear soon]()), 
+This section describes the steps for reproducing results we report in the accompanying paper ([link to preprint](https://doi.org/10.48550/arXiv.2408.04427)), 
 in particular for producing the graph we show above.
 Note that you might need over 60 GB of free disk space, a fast internet connection, and, depending on your machine, up to several hours to fully download the dataset and reproduce the results.
 As a faster verification alternative, we strongly recommend that you try out our [Hello World Example](#hello-world-example).
@@ -128,4 +128,4 @@ The script will save the output files in the `output` directory and produce `Rec
 
 ## How to cite this?
 
-Fedchin, A., Cooperman, I., Chaudhuri, P., Dexter, J.P. 2024 "AcrosticSleuth: Probabilistic Differentiation and Ranking of True Acrostics in Multilingual Corpora". Forthcoming
+Fedchin, A., Cooperman, I., Chaudhuri, P., Dexter, J.P. 2024 "AcrosticSleuth: Probabilistic Identification and Ranking of Acrostics in Multilingual Corpora". https://doi.org/10.48550/arXiv.2408.04427
