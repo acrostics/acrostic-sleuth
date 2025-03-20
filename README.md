@@ -4,7 +4,7 @@ AcrosticSleuth is a program for identifying and ranking acrostics.
 At a high level, the tool works by comparing the probability of random occurrence with the probability that a sequence of characters forms a meaningful word or phrase in the target language.
 AcrosticSleuth is optimized to quickly process gigabytes of text. 
 With the help of AcrosticSleuth, we have been able to discover multiple previously unknown acrostics.
-You can read more about the methodology in our upcoming paper ([link to preprint](https://doi.org/10.48550/arXiv.2408.04427)).
+You can read more about the methodology in our upcoming NAACL paper ([link to preprint](https://doi.org/10.48550/arXiv.2408.04427)).
 
 ### Table of contents
 - [What languages does AcrosticSleuth support?](#what-languages-does-acrosticsleuth-support)
@@ -128,4 +128,4 @@ The script will save the output files in the `output` directory and produce `Rec
 
 ## How to cite this?
 
-Fedchin, A., Cooperman, I., Chaudhuri, P., Dexter, J.P. 2024 "AcrosticSleuth: Probabilistic Identification and Ranking of Acrostics in Multilingual Corpora". https://doi.org/10.48550/arXiv.2408.04427
+Fedchin, A., Cooperman, I., Chaudhuri, P., Dexter, J.P. 2025 "AcrosticSleuth: Probabilistic Identification and Ranking of Acrostics in Multilingual Corpora". *NAACL.* https://doi.org/10.48550/arXiv.2408.04427
